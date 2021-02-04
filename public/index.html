@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+<title>Title</title>
+<script>
+    function print() {
+        var custNmae = document.querySelector('.cust_name').value;
+        var amount = document.querySelector('.amount').value;
+        if (custNmae && +amount > 0) {
+            window.open('/print.html?cust=' + custNmae + '&amount=' + amount);
+        }
+    }
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="form">
+        <img src="/assets/logo.jpg">
+        <input type="text" placeholder="שם הלקוח" class="input-entry cust_name"><br>
+        <input type="number" placeholder="מספר ארגזים" class="input-entry amount"><br>
+        <button onclick="print()">הדפס</button>
+    </div>
+</body>
+</html>
