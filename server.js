@@ -3,7 +3,7 @@ var app = express();
 const https = require('https')
 const fs = require('fs')
 const settings = JSON.parse(fs.readFileSync('./settings.json'));
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 if (settings.http) {
   app.listen(settings.http.port);
