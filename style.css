@@ -6,6 +6,11 @@
   .page-break { display: block; page-break-before: always; }
 }
 
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .form {
   margin-top: 15vh;
   text-align: center;
