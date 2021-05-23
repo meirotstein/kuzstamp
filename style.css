@@ -40,6 +40,9 @@ p {
   text-align: center;
   font-size:5vh;
   height: 393px;
+}
+
+.stamp .label {
   text-decoration: underline;
 }
 
