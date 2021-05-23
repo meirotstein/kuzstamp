@@ -7,7 +7,7 @@
 }
 
 p {
-  margin-top: 0.5em;
+  margin-top: 0.1em;
   margin-bottom: 0.5em;
 }
 
@@ -39,8 +39,8 @@ p {
 .stamp {
   text-align: center;
   font-size:5vh;
-  width: 619px;
   height: 393px;
+  text-decoration: underline;
 }
 
 .stamp .label2 {
@@ -50,4 +50,8 @@ p {
 .stamp img {
   width: 12vh;
   margin-top: 0.5vh;
+}
+
+p.last {
+  margin-top: 1em;
 }
