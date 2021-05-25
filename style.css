@@ -38,7 +38,7 @@ p {
 
 .stamp {
   text-align: center;
-  font-size:5vh;
+  font-size:5rem;
   height: 393px;
 }
 
@@ -53,6 +53,7 @@ p {
 .stamp img {
   width: 12vh;
   margin-top: 0.5vh;
+  margin-bottom: 3vh;
 }
 
 p.last {
