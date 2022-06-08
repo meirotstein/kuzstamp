@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <title>מחולל מדבקות</title>
+  <script>
+    if (location.hostname !== 'localhost') {
+        var b = document.createElement('BASE');
+        b.href = 'http://www.rotstein.co.il/kuzstamp/v2';
+        document.querySelector('html').appendChild(b);
+    }
+
+    var tmpl =  `<div class="stamp">` + 
+                  `<img src="assets/logo.jpg">` + 
+                  `<p><span class="label">{{custName}}</span></p>` +
+                  `<p><span class="label2">ארגז {{index}}</span></p>` +
+                  `<p class="last"><span class="label2">מתוך {{amount}}</span></p>` +
+                `</div>`;
+    var pageBreak = '<div class="page-break"></div>';
+
+    var ParamsStr = location.href.split("?");
+    var ParamsArr = (ParamsStr.length >= 2 && ParamsStr[1].split('&')) || [];
+
+    var custParam = ParamsArr.filter(function(item) {
+        return item.indexOf("cust=") === 0;
+    });
+
+    var custName = custParam.length && custParam[0].split("=")[1];
+
+    var amountParam = ParamsArr.filter(function(item) {
+        return item.indexOf("amount=") === 0;
+    });
+
+    var amount = amountParam.length && amountParam[0].split("=")[1];
+
+    document.addEventListener('DOMContentLoaded', function(event) {
+      var bodytr = '';
+
+      for (var i=0 ; i < +amount; ++i) {
+        bodytr = bodytr + tmpl.replace('{{custName}}', decodeURIComponent(custName)).replace('{{index}}', i+1).replace('{{amount}}', amount);
+        if (i < amount - 1) {
+          bodytr = bodytr + pageBreak;
+        }
+      }
+
+      document.querySelector('body').innerHTML = bodytr;
+
+      window.print();
+    });
+
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body></body>
+</html>

@@ -1,0 +1,60 @@
+@media all {
+  .page-break { display: none; }
+}
+
+@media print {
+  .page-break { display: block; page-break-before: always; }
+}
+
+p {
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+.form {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.form img {
+  width: 25vh;
+  margin-bottom: 6vh;
+}
+
+.form button {
+  width: 30vh;    
+  font-size: 4vh;
+}
+
+.input-entry {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 5vh;
+  font-size: 4vh;
+  margin-bottom: 5vh;
+}
+
+.stamp {
+  text-align: center;
+  font-size:5rem;
+}
+
+.stamp .label {
+  text-decoration: underline;
+}
+
+.stamp .label2 {
+  text-align: center;
+}
+
+.stamp img {
+  width: 12vh;
+  margin-top: 0.5vh;
+  margin-bottom: 3vh;
+}
+
+p.last {
+  margin-top: 1em;
+}
